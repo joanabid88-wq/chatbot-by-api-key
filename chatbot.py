@@ -1,7 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain_community.memory import ConversationBufferWindowMemory
+from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 import os
 
@@ -65,4 +65,5 @@ for role, text in st.session_state.history:
         st.chat_message("user").write(text)
     else:
         st.chat_message("assistant").write(text)
+
 
